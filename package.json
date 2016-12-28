@@ -1,0 +1,28 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "A shopping-car realize with vue2 ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galensheen/shopping-cart.git"
+  },
+  "keywords": [
+    "vue2",
+    "shopping-cart",
+    "vuex"
+  ],
+  "author": "Galen Sheen <galensheen@aliyun.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/galensheen/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/galensheen/shopping-cart#readme",
+  "devDependencies": {
+    "vue": "^2.1.7",
+    "webpack": "^2.2.0-rc.2"
+  }
+}
