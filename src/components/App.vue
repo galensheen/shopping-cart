@@ -1,19 +1,19 @@
 <template>
-  <div class="example">{{ msg }}</div>
+  <div id="app">
+    <h1>Shopping Cart Example</h1>
+    <hr>
+    <h2>Products</h2>
+    <product-list></product-list>
+    <hr>
+    <cart></cart>
+  </div>
 </template>
 
 <script>
+  import ProductList from './ProductList';
+  import Cart from './Cart';
+
   export default {
-    data() {
-      return {
-        msg: 'Hello world!'
-      }
-    }
+    components: {ProductList, Cart}
   }
 </script>
-
-<style>
-  .example {
-    color: red;
-  }
-</style>
