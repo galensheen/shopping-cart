@@ -1,19 +1,28 @@
 <template>
-  <div class="example">{{ msg }}</div>
+  <ul>
+    <li v-for="p in products">
+      {{ p.title }} - {{ p.price | currency }}
+      <br>
+      <button
+          :disabled="!p.inventory"
+          @click="addToCart(p)">
+        Add to cart
+      </button>
+    </li>
+  </ul>
 </template>
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
   export default {
-    data() {
-      return {
-        msg: 'Hello world!'
-      }
+    computed: mapGetters({
+      products: 'allProducts'
+    }),
+    methods: mapActions([
+      'addToCart'
+    ]),
+    created () {
+      this.$store.dispatch('getAllProducts')
     }
   }
 </script>
-
-<style>
-  .example {
-    color: red;
-  }
-</style>
